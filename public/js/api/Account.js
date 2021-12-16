@@ -1,3 +1,4 @@
+const {createRequest} = requie('createRequest');
 /**
  * Класс Account наследуется от Entity.
  * Управляет счетами пользователя.
@@ -7,7 +8,15 @@ class Account extends Entity {
   /**
    * Получает информацию о счёте
    * */
-  static get(id = '', callback){
+  static URL = '/account/';
 
+  static get(id = '', callback){
+    // super.list( data, callback );
+    createRequest({
+      url: `${this.URL}${id}`,
+      method: 'GET',
+      data: {},
+      callback: callback
+    });
   }
 }
