@@ -1,4 +1,4 @@
-const {createRequest} = requie('createRequest');
+// const {createRequest} = requie('createRequest');
 /**
  * Класс Entity - базовый для взаимодействия с сервером.
  * Имеет свойство URL, равно пустой строке.

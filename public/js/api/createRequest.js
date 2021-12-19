@@ -2,7 +2,7 @@
  * Основная функция для совершения запросов
  * на сервер.
  * */
-export const createRequest = (options = {}) => {
+ const createRequest = (options = {}) => {
     const {url, data, method, callback} = options;
     const xhr = new XMLHttpRequest;
     const dataObject = {

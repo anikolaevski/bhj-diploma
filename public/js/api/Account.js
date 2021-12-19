@@ -1,4 +1,4 @@
-const {createRequest} = requie('createRequest');
+// const {createRequest} = require('createRequest');
 /**
  * Класс Account наследуется от Entity.
  * Управляет счетами пользователя.
