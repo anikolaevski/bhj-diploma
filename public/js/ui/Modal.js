@@ -44,7 +44,7 @@ class Modal {
    * со значением «block»
    * */
   open() {
-    this.style.cssText = 'display: block;';
+    this.element.style.cssText = 'display: block;';
   }
   /**
    * Закрывает окно: удаляет CSS-свойство display

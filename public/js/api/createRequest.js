@@ -27,8 +27,16 @@
     }
     xhr.responseType = 'json';
 
-    xhr.addEventListener('readystatechange', function(err, data) {
+    xhr.addEventListener('readystatechange', function() {
         if( this.readyState == this.DONE ) {
+            let err = {error: null}, data = {};
+            // console.log(33, this);
+            if (this.status === 200) {
+                data = this.response;
+            } else {
+                err = this.response;
+            }
+            // console.log(39, 'err:', err, 'data:', data);
             callback(err, data);
         }
     });

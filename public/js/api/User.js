@@ -15,6 +15,7 @@ class User {
   static setCurrent(user) {
     try {
       localStorage.setItem(storageName, JSON.stringify(user));
+      App.setState('user-logged');
     } catch(err) {
       console.log(err);
     }
@@ -26,6 +27,7 @@ class User {
    * */
   static unsetCurrent() {
     localStorage.removeItem(storageName);
+    App.setState('init');
   }
 
   /**
