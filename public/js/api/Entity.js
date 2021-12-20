@@ -11,10 +11,18 @@ class Entity {
    * (в зависимости от того, что наследуется от Entity)
    * */
   static list(data, callback){
+    const sendData = {};
+    let url = this.url;
+    Object.assign(sendData, data);
+    if (data['url']) {
+      url = data.url;
+      delete data.url;
+    }
+    console.log(21, url, sendData);
     createRequest({
-      url: this.URL,
+      url: url,
       method: 'GET',
-      data: data,
+      data: sendData,
       callback: callback
     });
   }

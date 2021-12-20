@@ -15,7 +15,6 @@ class User {
   static setCurrent(user) {
     try {
       localStorage.setItem(storageName, JSON.stringify(user));
-      App.setState('user-logged');
     } catch(err) {
       console.log(err);
     }
@@ -27,7 +26,6 @@ class User {
    * */
   static unsetCurrent() {
     localStorage.removeItem(storageName);
-    App.setState('init');
   }
 
   /**
@@ -114,7 +112,7 @@ class User {
       method: 'POST',
       data: {},
       callback: (err, response) => {
-        if (response && response.user) {
+        if (response && response.success) {
           this.unsetCurrent();
         }
         callback(err, response);

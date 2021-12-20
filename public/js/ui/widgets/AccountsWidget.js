@@ -14,7 +14,9 @@ class AccountsWidget {
    * необходимо выкинуть ошибку.
    * */
   constructor( element ) {
-
+    this.element = element;
+    this.registerEvents();
+    this.update();
   }
 
   /**
@@ -25,7 +27,9 @@ class AccountsWidget {
    * вызывает AccountsWidget.onSelectAccount()
    * */
   registerEvents() {
-
+    document.querySelector('.create-account').addEventListener('click', function (evt) {
+      // console.log(29, 'Create Account');
+    });
   }
 
   /**
@@ -40,6 +44,17 @@ class AccountsWidget {
    * */
   update() {
 
+    // User.fetch((e, d) => { 
+    //   console.log(46,e, d); 
+    // });
+      const user = User.current();
+      console.log(51, user);
+      if (user) {
+        Account.list({id: user.id}, (e,d) => {
+          console.log(54, e, d);
+        });
+      }
+    
   }
 
   /**
