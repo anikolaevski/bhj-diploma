@@ -38,20 +38,12 @@ class AsyncForm {
    * */
   getData() {
     const data = {};
-    // const fd = new formData(this.element);
-    // const entries = fd.entries;
-    // for (let item of entries) {
-    //   const key = item[0],
-    //     value = item[1];
-    //     data[key] = value;
-    // }
-
-    // const data = {};
-    const inputs = this.element.querySelectorAll('input');
-    for (let k = 0; k < inputs.length; k++) {
-      const name = inputs[k].getAttribute('name');
-      const value = inputs[k].value;
-      data[name] = value;
+    const fd = new FormData(this.element);
+    const entries = fd.entries();
+    for (let item of entries) {
+      const key = item[0],
+        value = item[1];
+        data[key] = value;
     }
     return data;
   }

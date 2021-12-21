@@ -45,9 +45,7 @@ class AccountsWidget {
    * метода renderItem()
    * */
   update() {
-    this.clear();
     const user = User.current();
-    // console.log(51, user);
     if (user) {
       Account.list({id: user.id}, (e,d) => {
         if (e.error) {
@@ -85,10 +83,10 @@ class AccountsWidget {
     }
     element.classList.add('active');
     const id=element.getAttribute('data-id');
-    setTimeout(() => {
+    // setTimeout(() => {
       console.log(element, id);
       App.showPage( 'transactions', { account_id: id });
-    }, 200);
+    // }, 200);
   }
 
   /**
@@ -113,9 +111,19 @@ class AccountsWidget {
    * и добавляет его внутрь элемента виджета
    * */
   renderItem(data){
+    this.clear();
+    const incomeAccountsLlist = document.querySelector('#income-accounts-list');
+    const expenseAccountsLlist = document.querySelector('#expense-accounts-list');
+    incomeAccountsLlist.innerHTML = '';
+    expenseAccountsLlist.innerHTML = '';
     for (const row of data.data) {
+      // Добавление аккаунта на боковую панель
       const html = this.getAccountHTML(row);
       this.element.insertAdjacentHTML('beforeend', html);
+      // // Обновление селекторов формы
+      const option=`<option value=${row.id}>${row.name}</option>`;
+      incomeAccountsLlist.insertAdjacentHTML('beforeend', option);
+      expenseAccountsLlist.insertAdjacentHTML('beforeend', option);
     }
     const accounts = this.element.querySelectorAll('.account');
     for ( let k = 0; k < accounts.length; k++ ) {
