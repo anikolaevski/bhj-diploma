@@ -40,6 +40,11 @@
       "name": "Бизнес",
       "user_id": "1",
       "id": "3"
+    },
+    {
+      "name": "Кошелек",
+      "user_id": "1",
+      "id": "17igf45skxg0w2pl"
     }
   ],
   "transactions": [

@@ -12,13 +12,13 @@ class Entity {
    * */
   static list(data, callback){
     const sendData = {};
-    let url = this.url;
+    let url = this.URL;
     Object.assign(sendData, data);
     if (data['url']) {
       url = data.url;
       delete data.url;
     }
-    console.log(21, url, sendData);
+    // console.log(21, url, sendData);
     createRequest({
       url: url,
       method: 'GET',
