@@ -11,7 +11,11 @@ class TransactionsPage {
    * через registerEvents()
    * */
   constructor( element ) {
-
+    if (!element) {
+      throw {error: 'Передан пустой элемент!'};
+    }
+    this.element = element;
+    this.registerEvents();
   }
 
   /**
@@ -28,6 +32,18 @@ class TransactionsPage {
    * TransactionsPage.removeAccount соответственно
    * */
   registerEvents() {
+    
+    // Удаление аккаунта
+    document.querySelector('.remove-account').addEventListener('click', (evt) => {
+      evt.preventDefault();
+      this.getSelectedAccount((e,d) => {
+        if (e.error) {
+          console.log('Не выбран аккаунт!');
+          return;
+        }
+        console.log(`Удаление ${d.id} ${d.name}`);
+      });
+    });
 
   }
 
@@ -102,5 +118,19 @@ class TransactionsPage {
    * */
   renderTransactions(data){
 
+  }
+
+    /**
+   * Новый метод
+   * Получение текущего аккаунта
+   * */
+  getSelectedAccount(callback) {
+    const accountActive = document.querySelector('.account.active');
+    if (accountActive) {
+      const id = accountActive.getAttribute('data-id');
+      Account.get(id, function (e,d) {
+        callback(e, d.data);
+      });
+    }
   }
 }

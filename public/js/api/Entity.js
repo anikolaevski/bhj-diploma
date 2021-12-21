@@ -18,12 +18,16 @@ class Entity {
       url = data.url;
       delete data.url;
     }
+    let Callback = callback;
+    if (data['callback']) {
+      Callback = data.callback;
+    }
     // console.log(21, url, sendData);
     createRequest({
       url: url,
       method: 'GET',
       data: sendData,
-      callback: callback
+      callback: Callback
     });
   }
 
