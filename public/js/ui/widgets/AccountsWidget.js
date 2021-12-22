@@ -84,8 +84,9 @@ class AccountsWidget {
     element.classList.add('active');
     const id=element.getAttribute('data-id');
     // setTimeout(() => {
-      console.log(element, id);
+      // console.log(element, id);
       App.showPage( 'transactions', { account_id: id });
+      App.updatePages();
     // }, 200);
   }
 
