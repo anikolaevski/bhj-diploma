@@ -12,30 +12,30 @@ class App {
     this.element = document.querySelector(".app");
     this.content = document.querySelector(".content-wrapper");
 
-    // start добавление модала удаления аккаунта
-    const example = document.querySelector("#modal-new-income");
-    const html = example.outerHTML
-      .replace('id="modal-new-income"','id="modal-del-account"')
-      .replace('Новый доход','Удаление аккаунта');
-    example.insertAdjacentHTML('afterend', html);
-    const html2 = `
-      <form class="form" id="delete-account-form">
-          <div class="form-group">
-            <input id="delete-account-id" name="id" type="hidden" value="">
-            <label> Внимание! Аккаунт <span class="user-account-name"></span> будет удален.<br/>
-            <input id="delete-account-check" type="checkbox" name="isAgree"> Подтверждаю удаление аккаунта
-            </label>
-          </div>
-      </form>`;
-    const html3 = `
-    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Закрыть</button>
-    <button type="submit" class="btn btn-primary" form="delete-account-form">Подтвердить</button>
-    `;  
-    const modalDeleteAccount = document.querySelector("#modal-del-account");
-    const modalBody = modalDeleteAccount.querySelector(".modal-body");
-    const modalFooter = modalDeleteAccount.querySelector(".modal-footer");
-    modalBody.innerHTML = html2;
-    modalFooter.innerHTML = html3;
+    // // start добавление модала удаления аккаунта
+    // const example = document.querySelector("#modal-new-income");
+    // const html = example.outerHTML
+    //   .replace('id="modal-new-income"','id="modal-del-account"')
+    //   .replace('Новый доход','Удаление аккаунта');
+    // example.insertAdjacentHTML('afterend', html);
+    // const html2 = `
+    //   <form class="form" id="delete-account-form">
+    //       <div class="form-group">
+    //         <input id="delete-account-id" name="id" type="hidden" value="">
+    //         <label> Внимание! Аккаунт <span class="user-account-name"></span> будет удален.<br/>
+    //         <input id="delete-account-check" type="checkbox" name="isAgree"> Подтверждаю удаление аккаунта
+    //         </label>
+    //       </div>
+    //   </form>`;
+    // const html3 = `
+    // <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Закрыть</button>
+    // <button type="submit" class="btn btn-primary" form="delete-account-form">Подтвердить</button>
+    // `;  
+    // const modalDeleteAccount = document.querySelector("#modal-del-account");
+    // const modalBody = modalDeleteAccount.querySelector(".modal-body");
+    // const modalFooter = modalDeleteAccount.querySelector(".modal-footer");
+    // modalBody.innerHTML = html2;
+    // modalFooter.innerHTML = html3;
     // end добавление модала удаления аккаунта
 
     this.initPages();
@@ -81,6 +81,7 @@ class App {
       newIncome: new Modal(document.querySelector("#modal-new-income")),
       newExpense: new Modal(document.querySelector("#modal-new-expense")),
       deleteAccount: new Modal(document.querySelector("#modal-del-account")),
+      deleteTransaction: new Modal(document.querySelector("#modal-del-transaction")),
     };
   }
 
@@ -115,6 +116,9 @@ class App {
       ),
       deleteAccount: new DeleteAccountForm(
         document.querySelector("#delete-account-form")
+      ),
+      deleteTransaction: new DeleteTransactionForm(
+        document.querySelector("#delete-transaction-form")
       ),
     };
   }

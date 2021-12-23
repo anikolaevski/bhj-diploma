@@ -58,7 +58,10 @@ class CreateTransactionForm extends AsyncForm {
       console.log(error, response);
       if (response.success) {
         modal.close();
-        App.update();
+        setTimeout(() => {
+          App.showPage( 'transactions', { account_id: data.account_id });
+          App.update();
+        }, 500);
       } else {
         throw error;
       }

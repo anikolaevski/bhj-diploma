@@ -254,6 +254,57 @@
         </div>
     </div>
 
+    <div class="modal fade in" id="modal-del-account" data-modal-id="delAccount">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+                        <span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Удаление аккаунта</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form" id="delete-account-form">
+                        <div class="form-group">
+                          <input id="delete-account-id" name="id" type="hidden" value="">
+                          <label> Внимание! Аккаунт <span class="user-account-name"></span> будет удален.<br/>
+                          <input id="delete-account-check" type="checkbox" name="isAgree"> Подтверждаю удаление аккаунта
+                          </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary" form="delete-account-form">Подтвердить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade in" id="modal-del-transaction" data-modal-id="delTrans">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+                        <span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Удаление транзакции</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form" id="delete-transaction-form">
+                        <div class="form-group">
+                          <input id="delete-transaction-id" name="id" type="hidden" value="">
+                          <label> Внимание! Транзакция <span class="user-transaction-name"></span> будет удалена.<br/>
+                          <input id="delete-transaction-check" type="checkbox" name="isAgree"> Подтверждаю удаление тразнакции
+                          </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary" form="delete-transaction-form">Подтвердить</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/api/createRequest.js"></script>
     <script src="js/api/Entity.js"></script>
@@ -274,6 +325,7 @@
     <script src="js/ui/forms/CreateAccountForm.js"></script>
     <script src="js/ui/forms/DeleteAccountForm.js"></script>
     <script src="js/ui/forms/CreateTransactionForm.js"></script>
+    <script src="js/ui/forms/DeleteTransactionForm.js"></script>
 
     <script src="js/ui/Sidebar.js"></script>
     <script src="js/App.js"></script>

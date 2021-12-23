@@ -86,7 +86,7 @@ class AccountsWidget {
     // setTimeout(() => {
       // console.log(element, id);
       App.showPage( 'transactions', { account_id: id });
-      App.updatePages();
+      App.update();
     // }, 200);
   }
 

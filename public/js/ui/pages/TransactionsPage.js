@@ -50,7 +50,7 @@ class TransactionsPage {
           return;
         }
         console.log(`Удаление ${d.id} ${d.name}`);
-        this.removeAccount(d.id);
+        this.removeAccount(d);
       });
     });
     const trs = this.element.querySelectorAll('.transaction__remove');
@@ -61,10 +61,7 @@ class TransactionsPage {
         console.log(58, evt.currentTarget);
       });
     }
-    
-    
-
-  }
+ }
 
   /**
    * Удаляет счёт. Необходимо показать диаголовое окно (с помощью confirm())
@@ -75,9 +72,10 @@ class TransactionsPage {
    * либо обновляйте только виджет со счетами
    * для обновления приложения
    * */
-  removeAccount(id) {
+  removeAccount(obj) {
     const modal = App.getModal('deleteAccount'); 
-    modal.element.querySelector('#delete-account-id').value = id;
+    modal.element.querySelector('#delete-account-id').value = obj.id;
+    modal.element.querySelector('.user-account-name').innerText = `"${obj.name}"`;
     modal.element.querySelector('#delete-account-check').checked = false;
     modal.open();
   }
@@ -88,8 +86,13 @@ class TransactionsPage {
    * По удалению транзакции вызовите метод App.update(),
    * либо обновляйте текущую страницу (метод update) и виджет со счетами
    * */
-  removeTransaction( id ) {
-
+  removeTransaction( obj ) {
+    console.log(89, obj);
+    const modal = App.getModal('deleteTransaction');
+    modal.element.querySelector('#delete-transaction-id').value = obj.id;
+    modal.element.querySelector('.user-transaction-name').innerText = `"${obj.name}"`;
+    modal.element.querySelector('#delete-transaction-check').checked = false;
+    modal.open();
   }
 
   /**
@@ -185,12 +188,16 @@ class TransactionsPage {
       const html = this.getTransactionHTML(data[k]);
       content.insertAdjacentHTML('beforeend', html);
     }
-    const trs = this.element.querySelectorAll('.transaction__remove');
+    const trs = content.querySelectorAll('.transaction__remove');
     console.log(trs);
     for (let k = 0; k < trs.length; k++) {
       trs[k].addEventListener('click', (evt) => {
         evt.preventDefault();
-        console.log(58, evt.currentTarget);
+        const id = evt.currentTarget.getAttribute('data-id');
+        const title = evt.currentTarget.parentNode.parentNode
+        .querySelector('.transaction__title').innerText;
+          // console.log(199, title);
+        this.removeTransaction({id: id, name: title});
       });
     }
   }
@@ -206,6 +213,8 @@ class TransactionsPage {
       Account.get(id, function (e,d) {
         callback(e, d.data);
       });
+    } else if (this.lastOptions) {
+      callback({error: null}, this.lastOptions);
     } else {
       callback({error: 'Не выбран аккаунт'}, null);
     }

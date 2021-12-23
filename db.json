@@ -209,6 +209,87 @@
       "account_id": "17igfk3gkxhz4o7o",
       "user_id": "1",
       "created_at": "2021-12-22T21:25:20.737Z"
+    },
+    {
+      "id": "17igfjw0kxi1wg71",
+      "type": "income",
+      "name": "Кэшбэк",
+      "sum": 3.62,
+      "account_id": "1",
+      "user_id": "1",
+      "created_at": "2021-12-22T21:31:23.772Z"
+    },
+    {
+      "id": "17igfjz0kxi1y1an",
+      "type": "expense",
+      "name": "Штраф Ликсутову на кокаин",
+      "sum": 1000,
+      "account_id": "1",
+      "user_id": "1",
+      "created_at": "2021-12-22T21:32:37.774Z"
+    },
+    {
+      "id": "17igfg48kxin3vi8",
+      "type": "income",
+      "name": "Три рубля от старушки процентщицы",
+      "sum": 3,
+      "account_id": "17igfk3gkxhz4o7o",
+      "user_id": "1",
+      "created_at": "2021-12-23T07:25:02.143Z"
+    },
+    {
+      "id": "17igfmwskxin4kvc",
+      "type": "expense",
+      "name": "Гривенник околотошному",
+      "sum": 0.1,
+      "account_id": "17igfk3gkxhz4o7o",
+      "user_id": "1",
+      "created_at": "2021-12-23T07:25:35.015Z"
+    },
+    {
+      "id": "17igfli8kxin5iru",
+      "type": "income",
+      "name": "Продал шубу",
+      "sum": 27.11,
+      "account_id": "17igfk3gkxhz4o7o",
+      "user_id": "1",
+      "created_at": "2021-12-23T07:26:18.953Z"
+    },
+    {
+      "id": "17igfgrgkxin5yht",
+      "type": "expense",
+      "name": "Сигареты \"Прима\"",
+      "sum": 30,
+      "account_id": "17igfk3gkxhz4o7o",
+      "user_id": "1",
+      "created_at": "2021-12-23T07:26:39.328Z"
+    },
+    {
+      "id": "17igfd9skxin7wv9",
+      "type": "expense",
+      "name": "Поллитра",
+      "sum": 3.62,
+      "account_id": "17igfk3gkxhz4o7o",
+      "user_id": "1",
+      "created_at": "2021-12-23T07:28:10.532Z"
+    },
+    {
+      "id": "17igfo9wkxin8o1n",
+      "type": "income",
+      "name": "Продал календарик",
+      "sum": 10,
+      "account_id": "17igfk3gkxhz4o7o",
+      "user_id": "1",
+      "created_at": "2021-12-23T07:28:45.754Z"
+    },
+    {
+      "id": "17igfa7gkxinb65p",
+      "type": "income",
+      "name": "Гробанул кассу",
+      "sum": 20,
+      "account_id": "17igfk3gkxhz4o7o",
+      "user_id": "1",
+      "created_at": "2021-12-23T07:30:42.540Z"
     }
   ]
 }
