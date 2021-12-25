@@ -18,6 +18,7 @@ class CreateTransactionForm extends AsyncForm {
    * */
   renderAccountsList() {
     const user = User.current();
+    if (!user) {return;}
     Account.list({id: user.id}, (e,d) => {
       if (e.error) {
         console.log(e);
