@@ -54,11 +54,11 @@ class TransactionsPage {
       });
     });
     const trs = this.element.querySelectorAll('.transaction__remove');
-    console.log(trs);
+    // console.log(trs);
     for (let k = 0; k < trs.length; k++) {
       trs[k].addEventListener('click', (evt) => {
         evt.preventDefault();
-        console.log(58, evt.currentTarget);
+        // console.log(58, evt.currentTarget);
       });
     }
  }
@@ -87,7 +87,7 @@ class TransactionsPage {
    * либо обновляйте текущую страницу (метод update) и виджет со счетами
    * */
   removeTransaction( obj ) {
-    console.log(89, obj);
+    // console.log(89, obj);
     const modal = App.getModal('deleteTransaction');
     modal.element.querySelector('#delete-transaction-id').value = obj.id;
     modal.element.querySelector('.user-transaction-name').innerText = `"${obj.name}"`;
@@ -117,7 +117,8 @@ class TransactionsPage {
    * Устанавливает заголовок: «Название счёта»
    * */
   clear() {
-
+    this.renderTransactions([]);
+    document.querySelector('.content-title').textContent = 'Название счёта';
   }
 
   /**
@@ -189,7 +190,7 @@ class TransactionsPage {
       content.insertAdjacentHTML('beforeend', html);
     }
     const trs = content.querySelectorAll('.transaction__remove');
-    console.log(trs);
+    // console.log(trs);
     for (let k = 0; k < trs.length; k++) {
       trs[k].addEventListener('click', (evt) => {
         evt.preventDefault();

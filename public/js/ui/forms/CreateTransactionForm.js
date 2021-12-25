@@ -52,10 +52,10 @@ class CreateTransactionForm extends AsyncForm {
         break;
     }
     const modal = App.getModal(modalName);
-    console.log(data, modalName);
+    // console.log(data, modalName);
     
     Transaction.create(data, (error, response) => {
-      console.log(error, response);
+      // console.log(error, response);
       if (response.success) {
         modal.close();
         setTimeout(() => {

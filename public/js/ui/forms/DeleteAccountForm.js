@@ -11,11 +11,10 @@ class DeleteAccountForm extends AsyncForm {
   onSubmit(data) {
     console.log(data);
     const modal = App.getModal('deleteAccount');
-    const widget = App.getWidget('accounts');
     if (data.isAgree) {
       Account.remove(data, (error, response) => {
-        widget.update();
-        console.log(error, response);
+        // console.log(error, response);
+        location.reload();
       });      
     }
     modal.close();

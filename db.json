@@ -184,24 +184,6 @@
       "user_id": "1"
     },
     {
-      "id": "17igfl6gkxhz59ki",
-      "type": "income",
-      "name": "Подрезал бабла",
-      "sum": 1000,
-      "account_id": "17igfk3gkxhz4o7o",
-      "user_id": "1",
-      "created_at": "2021-12-22T20:14:16.241Z"
-    },
-    {
-      "id": "17igffe4kxhz62jq",
-      "type": "expense",
-      "name": "Побухал с пацанами",
-      "sum": 1000,
-      "account_id": "17igfk3gkxhz4o7o",
-      "user_id": "1",
-      "created_at": "2021-12-22T20:14:53.797Z"
-    },
-    {
       "id": "17igfb5okxi1oo2q",
       "type": "income",
       "name": "Сдал бутылки",
@@ -227,15 +209,6 @@
       "account_id": "1",
       "user_id": "1",
       "created_at": "2021-12-22T21:32:37.774Z"
-    },
-    {
-      "id": "17igfg48kxin3vi8",
-      "type": "income",
-      "name": "Три рубля от старушки процентщицы",
-      "sum": 3,
-      "account_id": "17igfk3gkxhz4o7o",
-      "user_id": "1",
-      "created_at": "2021-12-23T07:25:02.143Z"
     },
     {
       "id": "17igfmwskxin4kvc",
@@ -274,22 +247,67 @@
       "created_at": "2021-12-23T07:28:10.532Z"
     },
     {
-      "id": "17igfo9wkxin8o1n",
-      "type": "income",
-      "name": "Продал календарик",
-      "sum": 10,
+      "id": "17igf800kxljehww",
+      "type": "expense",
+      "name": "Гривенник извозчику",
+      "sum": 0.1,
       "account_id": "17igfk3gkxhz4o7o",
       "user_id": "1",
-      "created_at": "2021-12-23T07:28:45.754Z"
+      "created_at": "2021-12-25T08:04:37.807Z"
     },
     {
-      "id": "17igfa7gkxinb65p",
+      "id": "17igf1dckxljfqko",
       "type": "income",
-      "name": "Гробанул кассу",
-      "sum": 20,
+      "name": "Настрелял у метро",
+      "sum": 0.57,
       "account_id": "17igfk3gkxhz4o7o",
       "user_id": "1",
-      "created_at": "2021-12-23T07:30:42.540Z"
+      "created_at": "2021-12-25T08:05:35.687Z"
+    },
+    {
+      "id": "17igfafgkxljiim7",
+      "type": "income",
+      "name": "Заложил матушкино кольцо у старухи",
+      "sum": 0.9,
+      "account_id": "17igfk3gkxhz4o7o",
+      "user_id": "1",
+      "created_at": "2021-12-25T08:07:45.342Z"
+    },
+    {
+      "id": "17igfad8kxljk8jt",
+      "type": "expense",
+      "name": "Заплатил в кабаке за Мармеладова",
+      "sum": 1,
+      "account_id": "17igfk3gkxhz4o7o",
+      "user_id": "1",
+      "created_at": "2021-12-25T08:09:05.608Z"
+    },
+    {
+      "id": "17igf9iwkxlk536d",
+      "type": "expense",
+      "name": "Полтинник раздал нищим",
+      "sum": 0.5,
+      "account_id": "17igfk3gkxhz4o7o",
+      "user_id": "1",
+      "created_at": "2021-12-25T08:25:18.420Z"
+    },
+    {
+      "id": "17igf9ngkxll2nh6",
+      "type": "income",
+      "name": "Сдал пустую бутылку",
+      "sum": 0.14,
+      "account_id": "17igfk3gkxhz4o7o",
+      "user_id": "1",
+      "created_at": "2021-12-25T08:51:24.377Z"
+    },
+    {
+      "id": "17igf5s4kxll3639",
+      "type": "expense",
+      "name": "Пиво и рыбка",
+      "sum": 1.5,
+      "account_id": "17igfk3gkxhz4o7o",
+      "user_id": "1",
+      "created_at": "2021-12-25T08:51:48.500Z"
     }
   ]
 }

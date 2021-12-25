@@ -31,11 +31,13 @@ class TransactionsWidget {
     createIncomeButton.addEventListener('click', (evt) => {
       evt.preventDefault();
       const modal = App.getModal('newIncome');
+      App.getForm('createIncome').element.reset();
       modal.open();
     });
     createExpensButton.addEventListener('click', (evt) => {
       evt.preventDefault();
       const modal = App.getModal('newExpense');
+      App.getForm('createExpense').element.reset();
       modal.open();
     });
   }

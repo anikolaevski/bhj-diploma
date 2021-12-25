@@ -15,7 +15,7 @@ class CreateAccountForm extends AsyncForm {
     Account.create(data, (error, response) => {
       modal.close();
       widget.update();
-      console.log(error, response);
+      // console.log(error, response);
     });
     
   }

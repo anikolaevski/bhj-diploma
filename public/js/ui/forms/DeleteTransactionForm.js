@@ -9,15 +9,12 @@ class DeleteTransactionForm extends AsyncForm {
    * и сбрасывает форму
    * */
   onSubmit(data) {
-    console.log(data);
+    // console.log(data);
     const modal = App.getModal('deleteTransaction');
-    // const page = App.getPage('transactions');
-    // const widget = App.getWidget('transactions');
-    // console.log(widget);
     if (data.isAgree) {
       Transaction.remove(data, (error, response) => {
         App.update();
-        console.log(error, response);
+        // console.log(error, response);
       });      
     }
     modal.close();
