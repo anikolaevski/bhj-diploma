@@ -52,7 +52,9 @@ class Sidebar {
     });
     menuItemLogout.addEventListener('click', function(evt) {
       evt.preventDefault();
-      User.logout(() => {console.log('logout');});
+      User.logout(() => {
+        location.reload();
+      });
     });
     User.fetch(() => {
       const x = User.current();
